@@ -17,4 +17,8 @@ export class UsersRepository {
     const createOne = await this.userModel.create(user);
     return createOne;
   }
+
+  async findAll(): Promise<any[]> {
+    return this.userModel.find().exec();
+  }
 }

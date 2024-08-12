@@ -13,4 +13,8 @@ export class UsersService {
     const createOne = await this.usersRepository.createOne(user);
     return createOne;
   }
+
+  async findAll(): Promise<any[]> {
+    return this.usersRepository.findAll();
+  }
 }
